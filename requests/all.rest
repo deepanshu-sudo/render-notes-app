@@ -1,0 +1,41 @@
+###
+GET http://localhost:3001/api/notes/
+
+###
+GET http://localhost:3001/api/notes/<id>
+
+###
+POST http://localhost:3001/api/notes/ HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJvb3QiLCJpZCI6IjY2NTcxOTZhOTQ3ODgyZThiY2YzYzc4OCIsImlhdCI6MTcxNjk5MDkwNn0.VxvAb-_j4xufE6GvUV1EeMsUc7mjHOY11S37NHUOM_8
+
+{
+    "content": "<morjerere ore jksdf note content>",
+    "important": true,
+    "userId": "6657196a947882e8bcf3c788"
+}
+
+###
+DELETE  http://localhost:3001/api/notes/<id>
+
+###
+PUT http://localhost:3001/api/notes/<id> HTTP/1.1
+content-type: application/json
+
+{
+    "content": "<updated note content>",
+    "important": false
+}
+
+###
+POST http://localhost:3001/api/login
+Content-Type: application/json
+
+{
+    "username": "root",
+    "password": "sekret"
+}
+
+###
+GET http://localhost:3001/api/users
+
